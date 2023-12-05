@@ -8,7 +8,7 @@ RUN npm install
 
 COPY . .
 
-RUN npm run test:ci
+RUN npm run test
 
 COPY junit.xml ../
 
