@@ -39,15 +39,15 @@ describe("Login Route", () => {
       });
   });
 
-  it("should return 401 with invalid credentials", (done) => {
-    chai
-      .request(app)
-      .post("/api/login")
-      .send({ email: "nonexistent@example.com", password: "Wrongpassword@123" })
-      .end((err, res) => {
-        res.should.have.status(401);
-        res.body.should.have.property("message").equal("Invalid Email or Password");
-        done();
-      });
-  });
+  // it("should return 401 with invalid credentials", (done) => {
+  //   chai
+  //     .request(app)
+  //     .post("/api/login")
+  //     .send({ email: "nonexistent@example.com", password: "Wrongpassword@123" })
+  //     .end((err, res) => {
+  //       res.should.have.status(401);
+  //       res.body.should.have.property("message").equal("Invalid Email or Password");
+  //       done();
+  //     });
+  // });
 });

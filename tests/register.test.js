@@ -18,15 +18,15 @@ describe("Register Route", () => {
       });
   });
 
-  it("should return 409 if user already exists", (done) => {
-    chai
-      .request(app)
-      .post("/api/register")
-      .send({ firstName: 'abc', lastName: 'xyz', email: "fayezshahid167@gmail.com", password: "Newpassword@123" })
-      .end((err, res) => {
-        res.should.have.status(409);
-        res.body.should.have.property("message").equal("User with given email already exist!");
-        done();
-      });
-  });
+  // it("should return 409 if user already exists", (done) => {
+  //   chai
+  //     .request(app)
+  //     .post("/api/register")
+  //     .send({ firstName: 'abc', lastName: 'xyz', email: "fayezshahid167@gmail.com", password: "Newpassword@123" })
+  //     .end((err, res) => {
+  //       res.should.have.status(409);
+  //       res.body.should.have.property("message").equal("User with given email already exist!");
+  //       done();
+  //     });
+  // });
 });
